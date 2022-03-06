@@ -1,0 +1,2 @@
+fastapi==0.70.0
+markovify==0.9.4

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+      .center-body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .card {
+          border: 2px #CCCCCC solid;
+          box-shadow: 3px 3px 5px #999999;
+          padding: 30px;
+      }
+      .porn-title {
+        height: 200px;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .heading-title {
+        margin: 60px 0px;
+        font-size: 64px;
+      }
+
+      .heading-title-1 {
+        background: -webkit-linear-gradient(right top, #ef87be, pink);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .heading-title-2 {
+        background: -webkit-linear-gradient(right, pink, #ef87be);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .generate-btn {
+        background-color: #f9a3cb;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        box-shadow: 2px 2px 5px #ffcee6;
+        margin: 50px 0;
+      }
+      .generate-btn:active {
+        box-shadow: 0px 0px #ffffff;
+      }
+
+      .repository {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+      }
+
+      .fa-github {
+        font-size: 36px;
+      }
+
+      @media (max-width: 1080px) {
+          .heading-title {
+            font-size: 48px;
+            text-align: center;
+          }
+      }
+
+      @media (max-width: 768px) {
+        .heading-title {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .porn-title {
+            height: 200px;
+            width: 75vw;
+        }
+
+        .card {
+          padding: 20px;
+          box-shadow: 3px 3px 5px #999999;
+        }
+         .fa-github{
+            font-size: 24px;
+         } 
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porn Title Generation</title>
+  </head>
+  <body>
+    <div class="center-body">
+      <h1 class="heading-title">
+        <span class="heading-title-1">Porn Title</span> Generation For
+        <span class="heading-title-2">Fun!</span>
+      </h1>
+      <div class="card">
+        <h3 class="porn-title"></h3>
+      </div>
+      <button class="generate-btn" onclick="getTitle()">Generate Title</button>
+    </div>
+    <div class="repository">
+    <a href="https://github.com/daeisbae/PornhubDatasetAnalysis"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </body>
+  <script>
+    const getTitle = () => {
+      fetch("/title")
+        .then(function (resp) {
+          return resp.json();
+        })
+        .then(function (json) {
+          document.querySelector(".porn-title").innerHTML = json.title;
+        });
+    };
+  </script>
+</html>
