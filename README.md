@@ -5,7 +5,7 @@ A porn title generating web server made by extracting titles from pornhub and tr
 
 ## Test Link
 
-[Porn Title Generator Test Link](https://porn-title-generator-rkpc8.ondigitalocean.app/)
+[Porn Title Generator Test Link](https://porn-title-obho8.ondigitalocean.app/)
 
 <br>
 
