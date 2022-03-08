@@ -1,4 +1,7 @@
 # PornTitleGenerator
+
+![img](https://github.com/daeisbae/PornTitleGenerator/blob/main/samples/porn-generation.png)
+
 A porn title generating web server made by extracting titles from pornhub and trained using markov chain algorithm
 
 <br>
