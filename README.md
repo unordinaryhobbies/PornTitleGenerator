@@ -13,6 +13,8 @@ A porn title generating app server made by extracting titles from pornhub and tr
 <br>
 
 ## How to install
+- Unzip **porn_titles.zip**: Due to Git LFS File Limit.
+
 ### Digital Ocean: 
 - Just use Digital Ocean App to install. No specific configuration required.
 
