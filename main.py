@@ -4,7 +4,7 @@ import markovify
 
 #Load model
 def load_model():
-    with open('model.json', 'r') as f:
+    with open('porn_titles.json', 'r') as f:
         titleGenModel = markovify.Text.from_json(f.read())
     return titleGenModel
 
